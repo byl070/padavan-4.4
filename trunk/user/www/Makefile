@@ -24,7 +24,6 @@ romfs:
 	echo "Make www romfs"
 	rm -Rf $(ROMFS_DIR)/www
 	cp -R $(WEBUI_NAME) $(ROMFS_DIR)/www
-	mkdir -p $(ROMFS_DIR)/www/file
 	rm -f $(ROMFS_DIR)/www/httpd_check.htm
 	echo "ASUSTeK" > $(ROMFS_DIR)/www/httpd_check.htm
 	cd $(ROMFS_DIR)/www && ln -sf /opt/share/www/custom custom
