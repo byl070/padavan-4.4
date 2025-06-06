@@ -1,6 +1,6 @@
 #!/bin/sh
 
-DIR="/toolchain-4.4.x"
+DIR="toolchain-4.4.x"
 DL_URL="https://github.com/hanwckf/padavan-toolchain/releases/download/linux-4.4-v1.0"
 
 dl() {
@@ -9,7 +9,8 @@ dl() {
 	echo "Download toolchain: $1"
 	curl -O -L "${DL_URL}/$1" && \
 	mkdir -p $DIR && \
-	tar -xf "${1}" -C $DIR
+	tar -xf "${1}" -C $DIR && \
+	cp -rf $DIR /
 }
 
 if [ -d $DIR ]; then
