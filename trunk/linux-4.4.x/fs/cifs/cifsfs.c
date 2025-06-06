@@ -23,6 +23,7 @@
 
 /* Note that BB means BUGBUG (ie something to fix eventually) */
 
+#include <linux/nls.h>
 #include <linux/module.h>
 #include <linux/fs.h>
 #include <linux/mount.h>
