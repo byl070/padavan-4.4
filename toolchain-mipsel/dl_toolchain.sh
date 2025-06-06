@@ -10,7 +10,7 @@ dl() {
 	curl -O -L "${DL_URL}/$1" && \
 	mkdir -p $DIR && \
 	tar -xf "${1}" -C $DIR && \
-	cp -rf $DIR /
+	sudo cp -rf $DIR /
 }
 
 if [ -d $DIR ]; then
