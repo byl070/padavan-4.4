@@ -1,7 +1,7 @@
 #!/bin/sh
 
 DIR="toolchain-4.4.x"
-DL_URL="https://github.com/hanwckf/padavan-toolchain/releases/download/linux-4.4-v1.0"
+DL_URL="https://github0.com/hanwckf/padavan-toolchain/releases/download/linux-4.4-v1.0"
 
 dl() {
 	[ -z "$1" ] && return
@@ -9,8 +9,7 @@ dl() {
 	echo "Download toolchain: $1"
 	curl -O -L "${DL_URL}/$1" && \
 	mkdir -p $DIR && \
-	tar -xf "${1}" -C $DIR && \
-	sudo cp -rf $DIR /
+	tar -xf "${1}" -C $DIR
 }
 
 if [ -d $DIR ]; then
@@ -25,7 +24,8 @@ case $ARCH in
 		dl "aarch64_mipsel-linux-uclibc.tar.xz"
 		;;
 	x86_64)
-		dl "mipsel-linux-uclibc.tar.xz"
+		dl "mipsel-linux-uclibc.tar.xz" || sudo ./build_toolchain
+		sudo cp -rf $DIR /
 		;;
 	*)
 		echo "Unknown ARCH: $ARCH"
