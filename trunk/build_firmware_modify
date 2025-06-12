@@ -1,13 +1,12 @@
 #!/bin/bash
 
-if [ -z "$1" ] || [ "$EUID" != 0 ]; then
-	echo "Please run 'fakeroot $0 PRODUCT_NAME' to start build (see 'configs/templates/')"
+if [ "$EUID" != 0 ]; then
 	echo "For Windows Subsystem for Linux(WSL), use 'fakeroot-tcp' instead of 'fakeroot', or run with sudo"
 	exit 1
 fi
 
-if [ ! -f configs/templates/$1.config ] ; then
-	echo "configs/templates/$1.config not found "
+if [ ! -f .config ] ; then
+	echo "The file .config not found "
 	exit 1
 fi
 
