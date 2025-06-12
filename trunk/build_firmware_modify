@@ -6,7 +6,7 @@ if [ "$EUID" != 0 ]; then
 fi
 
 if [ ! -f .config" ] ; then
-	echo "The file .config not found "
+	echo "The config file not found"
 	exit 1
 fi
 
