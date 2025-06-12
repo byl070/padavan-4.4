@@ -5,7 +5,7 @@ if [ "$EUID" != 0 ]; then
 	exit 1
 fi
 
-if [ ! -f .config ] ; then
+if [ ! -f "$ROOTDIR/.config" ] ; then
 	echo "The file .config not found "
 	exit 1
 fi
