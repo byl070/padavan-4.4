@@ -2,7 +2,7 @@
 echo "======================= BUILD_CI $1 ======================="
 
 [ -d images ] && rm -f ./images/*.trx
-./build_firmware_modify $1 > build.log 2>&1 &
+./build_firmware_modify > build.log 2>&1 &
 
 while true ;do
 	sleep 10
