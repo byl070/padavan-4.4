@@ -1,4 +1,4 @@
-THISDIR = $(shell pwd)
+
 all:
 
 clean:
