@@ -7,7 +7,6 @@ if [ "$PS1" ] ; then
     export HOSTNAME=`/bin/hostname`
     export TERMINFO=/usr/share/terminfo
     export TERM=xterm
-    export clashdir=/etc/storage/clash
     [ -r /etc_ro/banner ] && cat /etc_ro/banner
     echo "Version: $(nvram get firmver_sub)"; echo ""
 
