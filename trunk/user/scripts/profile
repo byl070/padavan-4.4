@@ -19,4 +19,3 @@ alias ps='ps ww'
 alias ls='ls -hF --color=auto'
 alias ll='ls -AlhF --color=auto'
 alias htop='htop -t'
-alias clash=/etc/storage/clash/clash.sh
