@@ -136,8 +136,8 @@ check_crc_image(const char *fw_image)
 	}
 
 	if ((unsigned int)sbuf.st_size < (sizeof(image_header_t) + (2 * 1024 * 1024)) || 
-	    (unsigned int)sbuf.st_size > get_mtd_size(FW_MTD_NAME)) {
-		ret = -1;
+	    (unsigned int)sbuf.st_size > 20 * 1024 * 1024) {
+		ret = -1;                    /* get_mtd_size(FW_MTD_NAME) */
 		httpd_log("%s: Firmware image size is invalid!", "Firmware update");
 		goto checkcrc_fail;
 	}
