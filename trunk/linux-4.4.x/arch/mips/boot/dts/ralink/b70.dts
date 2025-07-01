@@ -91,7 +91,7 @@
 			};
 
 	  	        partition@140000 {
-			        label = "Firmware_Stub";
+			        label = "firmware";
 			        reg = <0x140000 0x2000000>; /* 32M */
 		        };
 
